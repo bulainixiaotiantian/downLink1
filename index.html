@@ -29,11 +29,20 @@
 	<script src="js/layui.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var device = layui.device();
-		if(device == 'weixin'){
+		console.log(device)
+		if(device.os=="weixin"){
+			console.log(device)
 			showLayer();
+		}else{
+			alert(
+				2
+			)
 		};
 		function showLayer(){
-			$(".layer").show().animate({"opcity":1},200);
-		};
+			$(".layer").show().stop().animate({"opcity":1},200);
+		}
+		function hideLayer(){
+			$(".layer").hide().stop().animate({"opcity":0},200);
+		}
 	</script>
 </html>
