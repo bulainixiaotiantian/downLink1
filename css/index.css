@@ -1,0 +1,93 @@
+
+@charset "utf-8";
+h1,h2,h3,h4,h5,h6,p,body,textarea,input,ul,ol,li,dd,dt,dl{
+	margin:0;
+	padding:0;
+}
+ol,ul{
+	list-style:none;
+}
+img,input{
+	border:none;
+}
+a{
+	text-decoration:none;color:inherit;
+	-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+    
+i{
+	font-style:normal;
+}
+body{
+	
+	font-family:arial ,"微软雅黑", "宋体";
+	letter-spacing: 2px;
+}
+html{
+	font-size:100px;
+}
+.clearfix{zoom:1;}
+.clearfix:after{content:"";display:block;clear:both;}
+img{
+	width:100%;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.fan {
+	transform: rotate(180deg);
+}
+.layer{
+	width:100%;
+	height:100%;
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:980;
+	opacity:0;
+	background:rgba(0,0,0,.6) url(../images/yindao.png) no-repeat 3.89rem 0.53rem;
+	background-size:5.58rem 6.42rem ;
+}
+
+.mainBj{
+		width: 100vw;
+		height: 100vh;
+		background: url(../images/bj.jpg) no-repeat;
+		background-size:cover ;
+	}
+	.download_btn{
+		position: fixed;
+		top:13.7rem;
+		left: 50%;
+		margin-left: -3.7rem;
+		width: 7.46rem;
+		
+	}
+	.download_btn div{
+		border: 1px solid #f44d59;
+		line-height: 1.17rem;
+		font-weight: bold;
+		padding-left: 2.62rem;
+		border-radius: 0.12rem;
+		font-size: 0.44rem;
+	}
+	.anZhuo{
+		color: #f44d59;
+		background:#fff url(../images/anZhuo.png) no-repeat;
+		background-size:0.48rem 0.56rem ;
+		margin-bottom: 0.78rem;
+		background-position: 1.58rem center;
+	}
+	.apple{
+		color: #fff;
+		background:#f44d59 url(../images/apple.png) no-repeat;
+		background-size:0.48rem 0.56rem ;
+		background-position: 1.58rem center;
+	}

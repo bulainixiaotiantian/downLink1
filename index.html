@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>账号管理</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="mainBj">
+		</div>
+		<div class="layer"></div>
+		<div class="download_btn">
+			<a href="#">
+				<div class="anZhuo">Android版下载</div>
+			</a>
+			
+			<a href="#">
+				<div class="apple">iphone版下载</div>
+			</a>
+		</div>
+	</body>
+	<script src="js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var device = layui.device();
+		if(device == 'weixin'){
+			
+		}
+		function showLayer(){
+			$(".layer").show().Animate({"opcity":1},200);
+		}
+	</script>
+</html>
