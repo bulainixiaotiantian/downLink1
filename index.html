@@ -7,15 +7,31 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
-		
-		<style>
-			
-		</style>
+		<script>
+				
+			window.onload = function(){
+				if(isWeiXin()){
+					document.getElementById("weixinDiv").style.display="block";
+					var dpr =  462;
+					var pxPerRem = document.documentElement.clientWidth * dpr / 750;
+					document.getElementById("weixinImg").style.width = pxPerRem+"px";
+				}
+
+			}
+			function isWeiXin(){
+				var ua = window.navigator.userAgent.toLowerCase();
+				if(ua.indexOf('micromessenger') != -1){
+					return true;
+				}else{
+					return false;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="mainBj">
 		</div>
-		<div class="layer"></div>
+		<div id="weixinDiv" class="layer"></div>
 		<div class="download_btn">
 			<a href="#">
 				<div class="anZhuo">Android版下载</div>
@@ -26,23 +42,5 @@
 			</a>
 		</div>
 	</body>
-	<script src="js/layui.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		var device = layui.device();
-		console.log(device)
-		if(device.os=="weixin"){
-			console.log(device)
-			showLayer();
-		}else{
-			alert(
-				2
-			)
-		};
-		function showLayer(){
-			$(".layer").show().stop().animate({"opcity":1},200);
-		}
-		function hideLayer(){
-			$(".layer").hide().stop().animate({"opcity":0},200);
-		}
-	</script>
+	
 </html>
